@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+    />
+  </head>
+  <body>
+    <form id="payment">
+      <fieldset>
+        <legend>Payment Information</legend>
+        <label for="cnumber"
+          >Card Number
+          <input
+            required
+            size="18"
+            type="text"
+            id="cnumber"
+            name="cnumber"
+            placeholder=""
+            minlength="13"
+            maxlength="16"
+            pattern="[0-9]{13,16}"
+            title="Card number must be 13 to 16 digits."
+          />
+        </label>
+        <label for="expiration">
+          Expiration
+          <input required type="month" id="expiration" name="expiration" />
+        </label>
+        <label for="cvv"
+          >CVV
+          <input
+            required
+            size="5"
+            type="text"
+            id="cvv"
+            name="cvv"
+            placeholder=""
+            minlength="2"
+            maxlength="3"
+            pattern="[0-9]{3,4}"
+            title="CVV must be 3 or 4 digits."
+          />
+        </label>
+      </fieldset>
+      <label>
+        <input type="submit" id="submit" />
+      </label>
+      <label>
+        <input type="reset" id="reset" />
+      </label>
+    </form>
+    <div id="message"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
